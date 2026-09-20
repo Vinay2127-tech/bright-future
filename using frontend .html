@@ -1,0 +1,3528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Bright Future Academy - Best coaching institute for Class 11 and 12, JEE, NEET and Board preparation.">
+
+    <title>Bright Future Academy | Class 11 & 12 Coaching</title>
+
+
+    <!-- ================= GOOGLE FONT ================= -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+
+    <!-- ================= ICONS ================= -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <!-- ================= CSS ================= -->
+
+    <style>
+
+        /* ==================================================
+           GLOBAL
+        ================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --secondary: #7c3aed;
+            --dark: #111827;
+            --text: #374151;
+            --light: #f8fafc;
+            --white: #ffffff;
+            --border: #e5e7eb;
+            --success: #16a34a;
+            --danger: #dc2626;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            color: var(--text);
+            background: var(--light);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        button,
+        input,
+        select,
+        textarea {
+            font-family: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            color: var(--dark);
+            margin-bottom: 12px;
+        }
+
+        .section-title p {
+            max-width: 650px;
+            margin: auto;
+            color: #6b7280;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            background: #1d4ed8;
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--primary);
+            color: var(--primary);
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+
+        /* ==================================================
+           TOP BAR
+        ================================================== */
+
+        .topbar {
+            background: var(--dark);
+            color: white;
+            padding: 8px 0;
+            font-size: 14px;
+        }
+
+        .topbar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .topbar span {
+            margin-right: 20px;
+        }
+
+        .topbar i {
+            margin-right: 6px;
+        }
+
+
+        /* ==================================================
+           NAVBAR
+        ================================================== */
+
+        header {
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+
+        .navbar {
+            height: 75px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(
+                135deg,
+                var(--primary),
+                var(--secondary)
+            );
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 22px;
+        }
+
+        .logo-text h2 {
+            color: var(--dark);
+            font-size: 20px;
+        }
+
+        .logo-text span {
+            color: var(--primary);
+            font-size: 11px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        .theme-btn {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+
+        /* ==================================================
+           HERO
+        ================================================== */
+
+        .hero {
+            min-height: 650px;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(
+                    120deg,
+                    rgba(37,99,235,0.95),
+                    rgba(124,58,237,0.92)
+                );
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.08);
+            right: -150px;
+            top: -100px;
+        }
+
+        .hero::after {
+            content: "";
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.08);
+            left: -100px;
+            bottom: -100px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 750px;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            padding: 8px 15px;
+            border-radius: 30px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+
+        .hero h1 {
+            font-size: 55px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #fde68a;
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 650px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .hero .btn-outline {
+            color: white;
+            border-color: white;
+        }
+
+        .hero .btn-outline:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+
+        /* ==================================================
+           STATS
+        ================================================== */
+
+        .stats {
+            margin-top: -50px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .stats-grid {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            padding: 30px;
+        }
+
+        .stat {
+            text-align: center;
+            border-right: 1px solid var(--border);
+        }
+
+        .stat:last-child {
+            border: none;
+        }
+
+        .stat h3 {
+            font-size: 32px;
+            color: var(--primary);
+        }
+
+        .stat p {
+            font-size: 14px;
+            color: #6b7280;
+        }
+
+
+        /* ==================================================
+           ABOUT
+        ================================================== */
+
+        .about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image {
+            min-height: 420px;
+            border-radius: 20px;
+            background:
+                linear-gradient(
+                    135deg,
+                    #dbeafe,
+                    #ede9fe
+                );
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 130px;
+            color: var(--primary);
+        }
+
+        .about-content h2 {
+            font-size: 38px;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+
+        .about-content p {
+            margin-bottom: 20px;
+            color: #6b7280;
+        }
+
+        .check-list li {
+            margin: 12px 0;
+        }
+
+        .check-list i {
+            color: var(--success);
+            margin-right: 10px;
+        }
+
+
+        /* ==================================================
+           COURSES
+        ================================================== */
+
+        .courses {
+            background: #f8fafc;
+        }
+
+        .course-filter {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 35px;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 9px 20px;
+            border: 1px solid var(--border);
+            background: white;
+            border-radius: 30px;
+            cursor: pointer;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 25px;
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            transition: 0.3s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+
+        .course-header {
+            padding: 25px;
+            background: linear-gradient(
+                135deg,
+                var(--primary),
+                var(--secondary)
+            );
+            color: white;
+        }
+
+        .course-header i {
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .course-header h3 {
+            font-size: 22px;
+        }
+
+        .course-body {
+            padding: 25px;
+        }
+
+        .course-body p {
+            color: #6b7280;
+            margin-bottom: 15px;
+        }
+
+        .course-body li {
+            margin: 8px 0;
+            font-size: 14px;
+        }
+
+        .course-body li i {
+            color: var(--success);
+            margin-right: 8px;
+        }
+
+
+        /* ==================================================
+           FEATURES
+        ================================================== */
+
+        .features {
+            background: white;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 25px;
+        }
+
+        .feature-card {
+            padding: 30px;
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            transition: 0.3s;
+        }
+
+        .feature-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            width: 55px;
+            height: 55px;
+            border-radius: 12px;
+            background: #eff6ff;
+            color: var(--primary);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .feature-card p {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+
+        /* ==================================================
+           FACULTY
+        ================================================== */
+
+        .faculty {
+            background: #f8fafc;
+        }
+
+        .faculty-grid {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+        }
+
+        .faculty-card {
+            background: white;
+            text-align: center;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .faculty-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: auto;
+            margin-bottom: 15px;
+            background: #dbeafe;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--primary);
+            font-size: 45px;
+        }
+
+        .faculty-card h3 {
+            color: var(--dark);
+        }
+
+        .faculty-card p {
+            color: var(--primary);
+            font-size: 14px;
+        }
+
+        .faculty-card small {
+            color: #6b7280;
+        }
+
+
+        /* ==================================================
+           RESULTS
+        ================================================== */
+
+        .results {
+            background: var(--dark);
+            color: white;
+        }
+
+        .results .section-title h2 {
+            color: white;
+        }
+
+        .results .section-title p {
+            color: #cbd5e1;
+        }
+
+        .result-grid {
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 20px;
+        }
+
+        .result-card {
+            background: rgba(255,255,255,0.08);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        .result-card h3 {
+            font-size: 40px;
+            color: #fde68a;
+        }
+
+
+        /* ==================================================
+           FEES
+        ================================================== */
+
+        .fees {
+            background: white;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 25px;
+        }
+
+        .price-card {
+            border: 1px solid var(--border);
+            border-radius: 15px;
+            padding: 35px;
+            text-align: center;
+            position: relative;
+        }
+
+        .price-card.popular {
+            border: 2px solid var(--primary);
+            transform: scale(1.03);
+        }
+
+        .popular-label {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+        }
+
+        .price-card h3 {
+            color: var(--dark);
+            font-size: 22px;
+        }
+
+        .price {
+            font-size: 38px;
+            color: var(--primary);
+            font-weight: 700;
+            margin: 15px 0;
+        }
+
+        .price-card li {
+            margin: 12px 0;
+            font-size: 14px;
+        }
+
+
+        /* ==================================================
+           TESTIMONIAL
+        ================================================== */
+
+        .testimonials {
+            background: #f8fafc;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 25px;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .stars {
+            color: #f59e0b;
+            margin-bottom: 15px;
+        }
+
+        .testimonial p {
+            color: #6b7280;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .student {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .student-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: #dbeafe;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        /* ==================================================
+           ADMISSION
+        ================================================== */
+
+        .admission {
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--primary),
+                    var(--secondary)
+                );
+            color: white;
+        }
+
+        .admission-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .admission h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .admission p {
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+        .admission-form {
+            background: white;
+            color: var(--text);
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 13px;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border);
+            border-radius: 7px;
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary);
+        }
+
+        .admission-form button {
+            width: 100%;
+        }
+
+
+        /* ==================================================
+           FAQ
+        ================================================== */
+
+        .faq {
+            background: white;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .faq-item {
+            border: 1px solid var(--border);
+            margin-bottom: 12px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 18px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: 0.3s;
+            padding: 0 18px;
+            color: #6b7280;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding: 0 18px 18px;
+        }
+
+
+        /* ==================================================
+           CONTACT
+        ================================================== */
+
+        .contact {
+            background: #f8fafc;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        .contact-info h3 {
+            font-size: 28px;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 15px;
+            margin: 25px 0;
+        }
+
+        .contact-item i {
+            width: 45px;
+            height: 45px;
+            background: #dbeafe;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+
+        /* ==================================================
+           FOOTER
+        ================================================== */
+
+        footer {
+            background: #0f172a;
+            color: #cbd5e1;
+            padding-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            padding-bottom: 40px;
+        }
+
+        .footer-logo {
+            color: white;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        footer h3 {
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        footer li {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .social {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid #334155;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .copyright {
+            border-top: 1px solid #1e293b;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 13px;
+        }
+
+
+        /* ==================================================
+           MODAL
+        ================================================== */
+
+        .modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 2000;
+            padding: 20px;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-box {
+            background: white;
+            width: 100%;
+            max-width: 500px;
+            border-radius: 15px;
+            padding: 30px;
+            position: relative;
+        }
+
+        .close-modal {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        .modal-box h2 {
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+
+
+        /* ==================================================
+           BACK TO TOP
+        ================================================== */
+
+        #backTop {
+            position: fixed;
+            right: 25px;
+            bottom: 25px;
+            width: 45px;
+            height: 45px;
+            border: none;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            z-index: 100;
+        }
+
+
+        /* ==================================================
+           DARK MODE
+        ================================================== */
+
+        body.dark {
+            background: #111827;
+            color: #e5e7eb;
+        }
+
+        body.dark header,
+        body.dark .about,
+        body.dark .features,
+        body.dark .fees,
+        body.dark .faq,
+        body.dark .course-card,
+        body.dark .feature-card,
+        body.dark .faculty-card,
+        body.dark .price-card,
+        body.dark .testimonial,
+        body.dark .contact-form,
+        body.dark .admission-form,
+        body.dark .modal-box {
+            background: #1f2937;
+            color: #e5e7eb;
+        }
+
+        body.dark .courses,
+        body.dark .faculty,
+        body.dark .testimonials,
+        body.dark .contact {
+            background: #111827;
+        }
+
+        body.dark h2,
+        body.dark h3,
+        body.dark .logo-text h2,
+        body.dark .section-title h2 {
+            color: white;
+        }
+
+
+        /* ==================================================
+           RESPONSIVE
+        ================================================== */
+
+        @media (max-width: 1000px) {
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .course-grid,
+            .feature-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .faculty-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+
+
+        @media (max-width: 768px) {
+
+            .topbar {
+                display: none;
+            }
+
+            .navbar {
+                height: 65px;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: absolute;
+                top: 65px;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 20px;
+                display: none;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hero {
+                min-height: 550px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2,1fr);
+                gap: 25px;
+            }
+
+            .stat {
+                border: none;
+            }
+
+            .about-grid,
+            .admission-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                min-height: 300px;
+            }
+
+            .course-grid,
+            .feature-grid,
+            .testimonial-grid,
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .faculty-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .result-grid {
+                grid-template-columns: repeat(2,1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .price-card.popular {
+                transform: none;
+            }
+
+            .section {
+                padding: 65px 0;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+        }
+
+
+        @media (max-width: 480px) {
+
+            .container {
+                width: 92%;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .hero-buttons .btn {
+                text-align: center;
+            }
+
+            .faculty-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .result-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ==================================================
+         TOP BAR
+    ================================================== -->
+
+    <div class="topbar">
+
+        <div class="container topbar-content">
+
+            <div>
+                <span>
+                    <i class="fa-solid fa-phone"></i>
+                    +91 9102143151
+                </span>
+
+                <span>
+                    <i class="fa-solid fa-envelope"></i>
+                    vinaykr91021@gmail.com
+                </span>
+            </div>
+
+            <div>
+                <span>
+                    Admissions Open 2026-27
+                </span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==================================================
+         NAVIGATION
+    ================================================== -->
+
+    <header>
+
+        <div class="container navbar">
+
+            <a href="#home" class="logo">
+
+                <div class="logo-icon">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                </div>
+
+                <div class="logo-text">
+
+                    <h2>Bright Future</h2>
+
+                    <span>ACADEMY</span>
+
+                </div>
+
+            </a>
+
+
+            <nav class="nav-links" id="navLinks">
+
+                <a href="#home">Home</a>
+
+                <a href="#about">About</a>
+
+                <a href="#courses">Courses</a>
+
+                <a href="#faculty">Faculty</a>
+
+                <a href="#results">Results</a>
+
+                <a href="#fees">Fees</a>
+
+                <a href="#contact">Contact</a>
+
+                <button
+                    class="theme-btn"
+                    id="themeBtn">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+                <button
+                    class="btn btn-primary"
+                    onclick="openAdmission()">
+
+                    Admission
+
+                </button>
+
+            </nav>
+
+
+            <div class="menu-btn" id="menuBtn">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ==================================================
+         HERO
+    ================================================== -->
+
+    <section class="hero" id="home">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <div class="hero-badge">
+
+                    <i class="fa-solid fa-star"></i>
+
+                    Trusted Coaching Institute
+
+                </div>
+
+                <h1>
+
+                    Build Your
+                    <span>Bright Future</span>
+                    With Us
+
+                </h1>
+
+                <p>
+
+                    Complete preparation for Class 11 & 12,
+                    Board Exams, JEE and NEET with experienced
+                    teachers, regular tests and personalized
+                    guidance.
+
+                </p>
+
+                <div class="hero-buttons">
+
+                    <button
+                        class="btn btn-primary"
+                        onclick="openAdmission()">
+
+                        <i class="fa-solid fa-user-plus"></i>
+                        Join Now
+
+                    </button>
+
+                    <a
+                        href="#courses"
+                        class="btn btn-outline">
+
+                        Explore Courses
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         STATS
+    ================================================== -->
+
+    <section class="stats">
+
+        <div class="container">
+
+            <div class="stats-grid">
+
+                <div class="stat">
+
+                    <h3 class="counter"
+                        data-target="5000">
+
+                        0
+
+                    </h3>
+
+                    <p>Students</p>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <h3 class="counter"
+                        data-target="98">
+
+                        0
+
+                    </h3>
+
+                    <p>Success Rate %</p>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <h3 class="counter"
+                        data-target="50">
+
+                        0
+
+                    </h3>
+
+                    <p>Expert Teachers</p>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <h3 class="counter"
+                        data-target="15">
+
+                        0
+
+                    </h3>
+
+                    <p>Years Experience</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         ABOUT
+    ================================================== -->
+
+    <section class="section about" id="about">
+
+        <div class="container about-grid">
+
+            <div class="about-image">
+
+                <i class="fa-solid fa-school"></i>
+
+            </div>
+
+
+            <div class="about-content">
+
+                <h2>
+                    Why Choose Bright Future Academy?
+                </h2>
+
+                <p>
+
+                    We provide a complete academic environment
+                    where students can build strong concepts,
+                    improve problem-solving skills and prepare
+                    confidently for their board and competitive
+                    examinations.
+
+                </p>
+
+                <ul class="check-list">
+
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        Experienced & dedicated faculty
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        Small batch sizes
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        Weekly tests and performance analysis
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        Doubt-clearing sessions
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        Study material and notes
+                    </li>
+
+                    <li>
+                        <i class="fa-solid fa-circle-check"></i>
+                        Parent-teacher meetings
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         COURSES
+    ================================================== -->
+
+    <section class="section courses" id="courses">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Our Courses</h2>
+
+                <p>
+                    Choose the right program according to
+                    your academic and competitive goals.
+                </p>
+
+            </div>
+
+
+            <div class="course-filter">
+
+                <button
+                    class="filter-btn active"
+                    data-filter="all">
+
+                    All
+
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="class11">
+
+                    Class 11
+
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="class12">
+
+                    Class 12
+
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="jee">
+
+                    JEE
+
+                </button>
+
+                <button
+                    class="filter-btn"
+                    data-filter="neet">
+
+                    NEET
+
+                </button>
+
+            </div>
+
+
+            <div class="course-grid">
+
+
+                <!-- COURSE 1 -->
+
+                <div class="course-card"
+                     data-category="class11">
+
+                    <div class="course-header">
+
+                        <i class="fa-solid fa-book"></i>
+
+                        <h3>Class 11 Science</h3>
+
+                    </div>
+
+                    <div class="course-body">
+
+                        <p>
+                            Complete Class 11 preparation
+                            for Physics, Chemistry and Mathematics/
+                            Biology.
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Concept building
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Weekly tests
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Doubt classes
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <!-- COURSE 2 -->
+
+                <div class="course-card"
+                     data-category="class12">
+
+                    <div class="course-header">
+
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                        <h3>Class 12 Science</h3>
+
+                    </div>
+
+                    <div class="course-body">
+
+                        <p>
+                            Board-focused Class 12 program
+                            with complete syllabus coverage.
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Board preparation
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Previous year papers
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Revision classes
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <!-- COURSE 3 -->
+
+                <div class="course-card"
+                     data-category="jee">
+
+                    <div class="course-header">
+
+                        <i class="fa-solid fa-atom"></i>
+
+                        <h3>JEE Foundation</h3>
+
+                    </div>
+
+                    <div class="course-body">
+
+                        <p>
+                            Build strong fundamentals for
+                            JEE Main and Advanced.
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Advanced problem solving
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                JEE test series
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Rank analysis
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <!-- COURSE 4 -->
+
+                <div class="course-card"
+                     data-category="neet">
+
+                    <div class="course-header">
+
+                        <i class="fa-solid fa-heart-pulse"></i>
+
+                        <h3>NEET Preparation</h3>
+
+                    </div>
+
+                    <div class="course-body">
+
+                        <p>
+                            Focused preparation for medical
+                            entrance examinations.
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Physics
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Chemistry
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Biology
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <!-- COURSE 5 -->
+
+                <div class="course-card"
+                     data-category="class11">
+
+                    <div class="course-header">
+
+                        <i class="fa-solid fa-flask"></i>
+
+                        <h3>Class 11 PCM</h3>
+
+                    </div>
+
+                    <div class="course-body">
+
+                        <p>
+                            Specialized Physics, Chemistry
+                            and Mathematics program.
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Mathematics
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Physics
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Chemistry
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <!-- COURSE 6 -->
+
+                <div class="course-card"
+                     data-category="class12">
+
+                    <div class="course-header">
+
+                        <i class="fa-solid fa-microscope"></i>
+
+                        <h3>Class 12 PCB</h3>
+
+                    </div>
+
+                    <div class="course-body">
+
+                        <p>
+                            Complete Physics, Chemistry and
+                            Biology preparation.
+                        </p>
+
+                        <ul>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Biology practice
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Practical guidance
+                            </li>
+
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Board revision
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         FEATURES
+    ================================================== -->
+
+    <section class="section features">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>What We Provide</h2>
+
+                <p>
+                    Everything students need for successful
+                    academic preparation.
+                </p>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                        <i class="fa-solid fa-chalkboard-user"></i>
+
+                    </div>
+
+                    <h3>Expert Teaching</h3>
+
+                    <p>
+                        Learn from experienced teachers
+                        who focus on conceptual clarity.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                        <i class="fa-solid fa-file-lines"></i>
+
+                    </div>
+
+                    <h3>Regular Tests</h3>
+
+                    <p>
+                        Weekly and monthly tests help
+                        students track their preparation.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                        <i class="fa-solid fa-chart-line"></i>
+
+                    </div>
+
+                    <h3>Performance Analysis</h3>
+
+                    <p>
+                        Detailed performance reports
+                        identify strengths and weaknesses.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                        <i class="fa-solid fa-video"></i>
+
+                    </div>
+
+                    <h3>Recorded Lectures</h3>
+
+                    <p>
+                        Revise important topics through
+                        recorded classroom sessions.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                        <i class="fa-solid fa-comments"></i>
+
+                    </div>
+
+                    <h3>Doubt Classes</h3>
+
+                    <p>
+                        Dedicated sessions for clearing
+                        difficult concepts and questions.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+
+                        <i class="fa-solid fa-users"></i>
+
+                    </div>
+
+                    <h3>Parent Support</h3>
+
+                    <p>
+                        Regular updates help parents
+                        understand student progress.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         FACULTY
+    ================================================== -->
+
+    <section class="section faculty" id="faculty">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Our Expert Faculty</h2>
+
+                <p>
+                    Experienced educators dedicated to
+                    student success.
+                </p>
+
+            </div>
+
+
+            <div class="faculty-grid">
+
+
+                <div class="faculty-card">
+
+                    <div class="faculty-photo">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+
+                    <h3>Dr. Raj Sharma</h3>
+
+                    <p>Physics</p>
+
+                    <small>
+                        12+ Years Experience
+                    </small>
+
+                </div>
+
+
+                <div class="faculty-card">
+
+                    <div class="faculty-photo">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+
+                    <h3>Ms. Priya Singh</h3>
+
+                    <p>Chemistry</p>
+
+                    <small>
+                        10+ Years Experience
+                    </small>
+
+                </div>
+
+
+                <div class="faculty-card">
+
+                    <div class="faculty-photo">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+
+                    <h3>Mr. Amit Kumar</h3>
+
+                    <p>Mathematics</p>
+
+                    <small>
+                        15+ Years Experience
+                    </small>
+
+                </div>
+
+
+                <div class="faculty-card">
+
+                    <div class="faculty-photo">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+
+                    <h3>Dr. Neha Verma</h3>
+
+                    <p>Biology</p>
+
+                    <small>
+                        11+ Years Experience
+                    </small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         RESULTS
+    ================================================== -->
+
+    <section class="section results" id="results">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Our Results</h2>
+
+                <p>
+                    Consistent performance through hard work,
+                    discipline and expert guidance.
+                </p>
+
+            </div>
+
+
+            <div class="result-grid">
+
+                <div class="result-card">
+
+                    <h3>98%</h3>
+
+                    <p>Board Success Rate</p>
+
+                </div>
+
+                <div class="result-card">
+
+                    <h3>95+</h3>
+
+                    <p>Students Above 90%</p>
+
+                </div>
+
+                <div class="result-card">
+
+                    <h3>50+</h3>
+
+                    <p>JEE Qualified</p>
+
+                </div>
+
+                <div class="result-card">
+
+                    <h3>40+</h3>
+
+                    <p>NEET Qualified</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         FEES
+    ================================================== -->
+
+    <section class="section fees" id="fees">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Course Fees</h2>
+
+                <p>
+                    Affordable programs designed for
+                    different student requirements.
+                </p>
+
+            </div>
+
+
+            <div class="pricing-grid">
+
+
+                <div class="price-card">
+
+                    <h3>Class 11</h3>
+
+                    <div class="price">
+                        ₹25,000
+                    </div>
+
+                    <p>Per Academic Year</p>
+
+                    <br>
+
+                    <ul>
+
+                        <li>✓ Complete syllabus</li>
+
+                        <li>✓ Study material</li>
+
+                        <li>✓ Weekly tests</li>
+
+                        <li>✓ Doubt classes</li>
+
+                    </ul>
+
+                    <br>
+
+                    <button
+                        class="btn btn-outline"
+                        onclick="openAdmission()">
+
+                        Enquire Now
+
+                    </button>
+
+                </div>
+
+
+                <div class="price-card popular">
+
+                    <span class="popular-label">
+                        MOST POPULAR
+                    </span>
+
+                    <h3>Class 12</h3>
+
+                    <div class="price">
+                        ₹30,000
+                    </div>
+
+                    <p>Per Academic Year</p>
+
+                    <br>
+
+                    <ul>
+
+                        <li>✓ Complete syllabus</li>
+
+                        <li>✓ Board preparation</li>
+
+                        <li>✓ Test series</li>
+
+                        <li>✓ Revision classes</li>
+
+                    </ul>
+
+                    <br>
+
+                    <button
+                        class="btn btn-primary"
+                        onclick="openAdmission()">
+
+                        Enquire Now
+
+                    </button>
+
+                </div>
+
+
+                <div class="price-card">
+
+                    <h3>JEE / NEET</h3>
+
+                    <div class="price">
+                        ₹45,000
+                    </div>
+
+                    <p>Complete Program</p>
+
+                    <br>
+
+                    <ul>
+
+                        <li>✓ Complete syllabus</li>
+
+                        <li>✓ Competitive tests</li>
+
+                        <li>✓ Study material</li>
+
+                        <li>✓ Performance analysis</li>
+
+                    </ul>
+
+                    <br>
+
+                    <button
+                        class="btn btn-outline"
+                        onclick="openAdmission()">
+
+                        Enquire Now
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         TESTIMONIALS
+    ================================================== -->
+
+    <section class="section testimonials">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>What Students Say</h2>
+
+                <p>
+                    Feedback from our students and parents.
+                </p>
+
+            </div>
+
+
+            <div class="testimonial-grid">
+
+
+                <div class="testimonial">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        "The teachers explain difficult
+                        concepts in a very simple way.
+                        My confidence improved significantly."
+                    </p>
+
+                    <div class="student">
+
+                        <div class="student-icon">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                        <div>
+                            <strong>Rahul</strong>
+                            <br>
+                            <small>Class 12 Student</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="testimonial">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        "Regular tests and performance reports
+                        helped me understand where I needed
+                        improvement."
+                    </p>
+
+                    <div class="student">
+
+                        <div class="student-icon">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                        <div>
+                            <strong>Ananya</strong>
+                            <br>
+                            <small>Class 11 Student</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="testimonial">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        "The faculty is supportive and the
+                        doubt classes are very useful."
+                    </p>
+
+                    <div class="student">
+
+                        <div class="student-icon">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                        <div>
+                            <strong>Aditya</strong>
+                            <br>
+                            <small>JEE Student</small>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         ADMISSION
+    ================================================== -->
+
+    <section class="section admission">
+
+        <div class="container admission-grid">
+
+            <div>
+
+                <h2>
+                    Start Your Journey Today
+                </h2>
+
+                <p>
+                    Admissions are open for Class 11,
+                    Class 12, JEE and NEET programs.
+                    Fill out the form and our counsellor
+                    will contact you.
+                </p>
+
+                <button
+                    class="btn btn-outline"
+                    onclick="openAdmission()">
+
+                    Apply for Admission
+
+                </button>
+
+            </div>
+
+
+            <div class="admission-form">
+
+                <h3>
+                    Quick Enquiry
+                </h3>
+
+                <br>
+
+                <form id="quickForm">
+
+                    <div class="form-group">
+
+                        <label>
+                            Student Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="quickName"
+                            placeholder="Enter student name"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="quickPhone"
+                            placeholder="Enter phone number"
+                            required>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Select Class
+                        </label>
+
+                        <select id="quickClass" required>
+
+                            <option value="">
+                                Select Class
+                            </option>
+
+                            <option>
+                                Class 11
+                            </option>
+
+                            <option>
+                                Class 12
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button
+                        class="btn btn-primary"
+                        type="submit">
+
+                        Submit Enquiry
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         FAQ
+    ================================================== -->
+
+    <section class="section faq">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Frequently Asked Questions</h2>
+
+                <p>
+                    Find answers to common questions.
+                </p>
+
+            </div>
+
+
+            <div class="faq-container">
+
+
+                <div class="faq-item">
+
+                    <div class="faq-question">
+
+                        Is admission available for Class 11?
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </div>
+
+                    <div class="faq-answer">
+
+                        Yes. We offer complete Class 11
+                        programs for PCM and PCB students.
+
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <div class="faq-question">
+
+                        Do you provide JEE preparation?
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </div>
+
+                    <div class="faq-answer">
+
+                        Yes. Our JEE program covers
+                        Physics, Chemistry and Mathematics
+                        with regular competitive tests.
+
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <div class="faq-question">
+
+                        Do you provide study material?
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </div>
+
+                    <div class="faq-answer">
+
+                        Yes. Students receive notes,
+                        practice questions, assignments
+                        and test papers.
+
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <div class="faq-question">
+
+                        Are doubt classes available?
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </div>
+
+                    <div class="faq-answer">
+
+                        Yes. Dedicated doubt sessions are
+                        conducted regularly for students.
+
+                    </div>
+
+                </div>
+
+
+                <div class="faq-item">
+
+                    <div class="faq-question">
+
+                        Can I attend a demo class?
+
+                        <i class="fa-solid fa-plus"></i>
+
+                    </div>
+
+                    <div class="faq-answer">
+
+                        Yes. Contact our admission team
+                        to schedule a demo class.
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         CONTACT
+    ================================================== -->
+
+    <section class="section contact" id="contact">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>Contact Us</h2>
+
+                <p>
+                    Get in touch with our admission team.
+                </p>
+
+            </div>
+
+
+            <div class="contact-grid">
+
+
+                <div class="contact-info">
+
+                    <h3>
+                        Let's Talk
+                    </h3>
+
+                    <p>
+                        Have questions about courses,
+                        fees or admission? Contact us.
+                    </p>
+
+
+                    <div class="contact-item">
+
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <div>
+
+                            <strong>Address</strong>
+
+                            <p>
+                                Main Road, Bettiah,
+                                Bihar, India
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <i class="fa-solid fa-phone"></i>
+
+                        <div>
+
+                            <strong>Phone</strong>
+
+                            <p>
+                                +91 9102143151
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <i class="fa-solid fa-envelope"></i>
+
+                        <div>
+
+                            <strong>Email</strong>
+
+                            <p>
+                                vinaykr91021@gmail.com
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="contact-form">
+
+                    <form id="contactForm">
+
+                        <div class="form-group">
+
+                            <label>
+                                Your Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="contactName"
+                                placeholder="Enter your name"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Email
+                            </label>
+
+                            <input
+                                type="email"
+                                id="contactEmail"
+                                placeholder="Enter your email"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Message
+                            </label>
+
+                            <textarea
+                                id="contactMessage"
+                                placeholder="Write your message..."
+                                required></textarea>
+
+                        </div>
+
+
+                        <button
+                            class="btn btn-primary"
+                            type="submit">
+
+                            Send Message
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         FOOTER
+    ================================================== -->
+
+    <footer>
+
+        <div class="container footer-grid">
+
+
+            <div>
+
+                <div class="footer-logo">
+
+                    <i class="fa-solid fa-graduation-cap"></i>
+
+                    Bright Future Academy
+
+                </div>
+
+                <p>
+                    Empowering students with knowledge,
+                    confidence and the right guidance
+                    for their future.
+                </p>
+
+
+                <div class="social">
+
+                    <a href="#">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+
+                    <a href="#">
+                        <i class="fa-brands fa-telegram"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <h3>Quick Links</h3>
+
+                <ul>
+
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+
+                    <li>
+                        <a href="#courses">Courses</a>
+                    </li>
+
+                    <li>
+                        <a href="#faculty">Faculty</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3>Courses</h3>
+
+                <ul>
+
+                    <li>Class 11 PCM</li>
+
+                    <li>Class 11 PCB</li>
+
+                    <li>Class 12 PCM</li>
+
+                    <li>Class 12 PCB</li>
+
+                    <li>JEE Preparation</li>
+
+                    <li>NEET Preparation</li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3>Contact</h3>
+
+                <ul>
+
+                    <li>
+                        +91 9102143151
+                    </li>
+
+                    <li>
+                        vinaykr91021@gmail.com
+                    </li>
+
+                    <li>
+                        Bettiah West champaran Bihar
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="copyright">
+
+            © 2026 Bright Future Academy.
+            All Rights Reserved.
+
+        </div>
+
+    </footer>
+
+
+    <!-- ==================================================
+         ADMISSION MODAL
+    ================================================== -->
+
+    <div class="modal" id="admissionModal">
+
+        <div class="modal-box">
+
+            <span
+                class="close-modal"
+                onclick="closeAdmission()">
+
+                ×
+
+            </span>
+
+
+            <h2>
+                Admission Enquiry
+            </h2>
+
+
+            <form id="admissionForm">
+
+                <div class="form-group">
+
+                    <label>
+                        Student Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="studentName"
+                        placeholder="Enter student name"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Parent Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="parentName"
+                        placeholder="Enter parent name"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Mobile Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="studentPhone"
+                        placeholder="Enter mobile number"
+                        required>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Select Program
+                    </label>
+
+                    <select id="program" required>
+
+                        <option value="">
+                            Select Program
+                        </option>
+
+                        <option>
+                            Class 11 PCM
+                        </option>
+
+                        <option>
+                            Class 11 PCB
+                        </option>
+
+                        <option>
+                            Class 12 PCM
+                        </option>
+
+                        <option>
+                            Class 12 PCB
+                        </option>
+
+                        <option>
+                            JEE Preparation
+                        </option>
+
+                        <option>
+                            NEET Preparation
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button
+                    class="btn btn-primary"
+                    type="submit">
+
+                    Submit Application
+
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <!-- ==================================================
+         BACK TO TOP
+    ================================================== -->
+
+    <button id="backTop">
+
+        <i class="fa-solid fa-arrow-up"></i>
+
+    </button>
+
+
+    <!-- ==================================================
+         JAVASCRIPT
+    ================================================== -->
+
+    <script>
+
+
+        /* ==================================================
+           MOBILE MENU
+        ================================================== */
+
+        const menuBtn =
+            document.getElementById("menuBtn");
+
+        const navLinks =
+            document.getElementById("navLinks");
+
+
+        menuBtn.addEventListener("click", function() {
+
+            navLinks.classList.toggle("active");
+
+        });
+
+
+        /* Close menu after clicking link */
+
+        document
+            .querySelectorAll(".nav-links a")
+            .forEach(function(link) {
+
+                link.addEventListener("click", function() {
+
+                    navLinks.classList.remove("active");
+
+                });
+
+            });
+
+
+        /* ==================================================
+           DARK MODE
+        ================================================== */
+
+        const themeBtn =
+            document.getElementById("themeBtn");
+
+
+        themeBtn.addEventListener("click", function() {
+
+            document.body.classList.toggle("dark");
+
+            const icon =
+                themeBtn.querySelector("i");
+
+
+            if (document.body.classList.contains("dark")) {
+
+                icon.classList.remove("fa-moon");
+
+                icon.classList.add("fa-sun");
+
+            } else {
+
+                icon.classList.remove("fa-sun");
+
+                icon.classList.add("fa-moon");
+
+            }
+
+        });
+
+
+        /* ==================================================
+           COUNTER ANIMATION
+        ================================================== */
+
+        const counters =
+            document.querySelectorAll(".counter");
+
+
+        counters.forEach(function(counter) {
+
+            const target =
+                Number(counter.dataset.target);
+
+            let current = 0;
+
+            const increment =
+                Math.ceil(target / 100);
+
+
+            function updateCounter() {
+
+                current += increment;
+
+                if (current >= target) {
+
+                    counter.textContent = target;
+
+                } else {
+
+                    counter.textContent = current;
+
+                    requestAnimationFrame(updateCounter);
+
+                }
+
+            }
+
+            updateCounter();
+
+        });
+
+
+        /* ==================================================
+           COURSE FILTER
+        ================================================== */
+
+        const filterButtons =
+            document.querySelectorAll(".filter-btn");
+
+        const courseCards =
+            document.querySelectorAll(".course-card");
+
+
+        filterButtons.forEach(function(button) {
+
+            button.addEventListener("click", function() {
+
+                filterButtons.forEach(function(btn) {
+
+                    btn.classList.remove("active");
+
+                });
+
+                button.classList.add("active");
+
+
+                const filter =
+                    button.dataset.filter;
+
+
+                courseCards.forEach(function(card) {
+
+                    const category =
+                        card.dataset.category;
+
+
+                    if (
+                        filter === "all" ||
+                        category === filter
+                    ) {
+
+                        card.style.display = "block";
+
+                    } else {
+
+                        card.style.display = "none";
+
+                    }
+
+                });
+
+            });
+
+        });
+
+
+        /* ==================================================
+           FAQ
+        ================================================== */
+
+        const faqItems =
+            document.querySelectorAll(".faq-item");
+
+
+        faqItems.forEach(function(item) {
+
+            const question =
+                item.querySelector(".faq-question");
+
+            const icon =
+                question.querySelector("i");
+
+
+            question.addEventListener("click", function() {
+
+                item.classList.toggle("active");
+
+
+                if (item.classList.contains("active")) {
+
+                    icon.classList.remove("fa-plus");
+
+                    icon.classList.add("fa-minus");
+
+                } else {
+
+                    icon.classList.remove("fa-minus");
+
+                    icon.classList.add("fa-plus");
+
+                }
+
+            });
+
+        });
+
+
+        /* ==================================================
+           ADMISSION MODAL
+        ================================================== */
+
+        const modal =
+            document.getElementById("admissionModal");
+
+
+        function openAdmission() {
+
+            modal.classList.add("active");
+
+            document.body.style.overflow = "hidden";
+
+        }
+
+
+        function closeAdmission() {
+
+            modal.classList.remove("active");
+
+            document.body.style.overflow = "auto";
+
+        }
+
+
+        /* Close modal when clicking outside */
+
+        modal.addEventListener("click", function(event) {
+
+            if (event.target === modal) {
+
+                closeAdmission();
+
+            }
+
+        });
+
+
+        /* ==================================================
+           ADMISSION FORM
+        ================================================== */
+
+        const admissionForm =
+            document.getElementById("admissionForm");
+
+
+        admissionForm.addEventListener(
+            "submit",
+            function(event) {
+
+                event.preventDefault();
+
+
+                const name =
+                    document.getElementById(
+                        "studentName"
+                    ).value;
+
+
+                const program =
+                    document.getElementById(
+                        "program"
+                    ).value;
+
+
+                alert(
+                    "Thank you, " +
+                    name +
+                    "!\n\nYour admission enquiry for " +
+                    program +
+                    " has been submitted."
+                );
+
+
+                admissionForm.reset();
+
+                closeAdmission();
+
+            }
+        );
+
+
+        /* ==================================================
+           QUICK FORM
+        ================================================== */
+
+        const quickForm =
+            document.getElementById("quickForm");
+
+
+        quickForm.addEventListener(
+            "submit",
+            function(event) {
+
+                event.preventDefault();
+
+
+                const name =
+                    document.getElementById(
+                        "quickName"
+                    ).value;
+
+
+                alert(
+                    "Thank you " +
+                    name +
+                    "!\nOur counsellor will contact you soon."
+                );
+
+
+                quickForm.reset();
+
+            }
+        );
+
+
+        /* ==================================================
+           CONTACT FORM
+        ================================================== */
+
+        const contactForm =
+            document.getElementById("contactForm");
+
+
+        contactForm.addEventListener(
+            "submit",
+            function(event) {
+
+                event.preventDefault();
+
+
+                const name =
+                    document.getElementById(
+                        "contactName"
+                    ).value;
+
+
+                alert(
+                    "Thank you " +
+                    name +
+                    "!\nYour message has been sent successfully."
+                );
+
+
+                contactForm.reset();
+
+            }
+        );
+
+
+        /* ==================================================
+           BACK TO TOP
+        ================================================== */
+
+        const backTop =
+            document.getElementById("backTop");
+
+
+        window.addEventListener("scroll", function() {
+
+            if (window.scrollY > 400) {
+
+                backTop.style.display = "block";
+
+            } else {
+
+                backTop.style.display = "none";
+
+            }
+
+        });
+
+
+        backTop.addEventListener("click", function() {
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        });
+
+
+        /* ==================================================
+           ESCAPE KEY CLOSE MODAL
+        ================================================== */
+
+        document.addEventListener(
+            "keydown",
+            function(event) {
+
+                if (event.key === "Escape") {
+
+                    closeAdmission();
+
+                }
+
+            }
+        );
+
+
+    </script>
+
+</body>
+
+</html>
